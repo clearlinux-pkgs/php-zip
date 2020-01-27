@@ -4,7 +4,7 @@
 #
 Name     : php-zip
 Version  : 1.15.5
-Release  : 3
+Release  : 4
 URL      : https://pecl.php.net/get/zip-1.15.5.tgz
 Source0  : https://pecl.php.net/get/zip-1.15.5.tgz
 Summary  : No detailed summary available
@@ -13,6 +13,7 @@ License  : PHP-3.01
 Requires: php-zip-lib = %{version}-%{release}
 BuildRequires : buildreq-php
 BuildRequires : libzip-dev
+BuildRequires : pcre2-dev
 
 %description
 No detailed description available
@@ -27,6 +28,7 @@ lib components for the php-zip package.
 
 %prep
 %setup -q -n zip-1.15.5
+cd %{_builddir}/zip-1.15.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -45,4 +47,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20180731/zip.so
+/usr/lib64/extensions/no-debug-non-zts-20190902/zip.so
