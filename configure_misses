@@ -3,3 +3,5 @@ Configure miss: suncc
 Configure miss: if compiler supports -R
 Configure miss: if debug is enabled
 Configure miss: if zts is enabled
+Configure miss: zip_register_cancel_callback_with_state in -lzip
+Configure miss: zip_compression_method_supported in -lzip
